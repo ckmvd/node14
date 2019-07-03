@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="d" style="display: block">
+    123123
+</div>
+<button type="button" id="btn">
+    d
+</button>
+<script>
+    var a, btn, flag;
+    init();
+    setInterval(function () {
+        clickHandler()
+        _clickHandler()
+    },1000);
+    function init() {
+        a = document.getElementById('d');
+        btn = document.getElementById('btn');
+        flag = true;
+        btn.addEventListener('click', clickHandler);
+    }
+
+    function clickHandler() {
+        flag = !flag;
+        if (flag) {
+            a.style.display = 'block';
+            return
+        }
+        a.style.display = 'none';
+    }
+</script>
+<!--<script>-->
+    <!--var bool = false;-->
+    <!--document.addEventListener("click", _clickHandler);-->
+
+    <!--function _clickHandler(e) {-->
+        <!--bool = !bool;-->
+        <!--if (bool) {-->
+            <!--document.documentElement.style.backgroundColor = "red";-->
+            <!--return;-->
+        <!--}-->
+        <!--document.documentElement.style.backgroundColor = "white";-->
+    <!--}-->
+<!--</script>-->
+</body>
+</html>
